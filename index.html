@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: 'Arial Narrow';
+      background: #8ACE00;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+      margin: 0;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.7); 
+      color: #000;
+      padding: 30px 40px;
+      border-radius: 0;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 12px 1px;
+      margin: 15px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 0; 
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.9); 
+    }
+    button {
+      background-color: #8ACE00; 
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 0; 
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    .result {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .icon {
+      width: 64px;
+      vertical-align: middle;
+    }
+    .weather-detail {
+      margin: 5px 0;
+    }
+   
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <h1>Weather App</h1>
+  <div class="container">
+    <input type="text" id="city" placeholder="Enter city name">
+    <button onclick="getWeatherJoke()">Get Weather</button>
+
+    <div class="result" id="result" style="display: none;">
+      <h2 id="city-name"></h2>
+      <p><img id="icon" class="icon" src="" alt="weather icon"/></p>
+      <div class="weather-detail" id="temp"></div>
+      <div class="weather-detail" id="wind"></div>
+      <div class="weather-detail" id="humidity"></div>
+      <div class="weather-detail" id="cloud"></div>
+      <div class="weather-detail" id="feelslike"></div>
+      <p id="joke" style="font-style: italic; margin-top: 10px;"></p>
+    </div>
+  </div>
+<footer>MADE BY ISHIKA</footer>
+  <script>
+    function getWeatherJoke() {
+      const city = document.getElementById('city').value;
+      if (!city.trim()) {
+        alert("Please enter a city name.");
+        return;
+      }
+
+      fetch(`/get_weather_joke?city=${encodeURIComponent(city)}`)
+        .then(response => {
+          if (!response.ok) throw new Error("Failed to fetch weather data");
+          return response.json();
+        })
+        .then(data => {
+          const weather = data.weather;
+          document.getElementById('result').style.display = "block";
+          document.getElementById('city-name').textContent = `${weather.city}, ${weather.country}`;
+          document.getElementById('icon').src = weather.icon;
+          document.getElementById('temp').textContent = `Temperature: ${weather.temp_c}°C / ${weather.temp_f}°F`;
+          document.getElementById('wind').textContent = `Wind: ${weather.wind_kph} kph`;
+          document.getElementById('humidity').textContent = `Humidity: ${weather.humidity}%`;
+          document.getElementById('cloud').textContent = `Cloud cover: ${weather.cloud}%`;
+          document.getElementById('feelslike').textContent = `Feels like: ${weather.feelslike_c}°C / ${weather.feelslike_f}°F`;
+          document.getElementById('joke').textContent = `"${data.joke}"`;
+        })
+        .catch(error => {
+          console.error(error);
+          alert("Error: " + error.message);
+        });
+    }
+  </script>
+</body>
+</html>
