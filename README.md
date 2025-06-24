@@ -29,14 +29,15 @@ Add your keys in api_keys.py
 ---
 
 File Structure
-WEATHER-APP/
+weather-app/
 │
 ├── backend/
-│   ├── templates/               # HTML templates for Flask
-│   │   └── index.html           # Main frontend interface
-│   ├── api_keys.py              # Stores or loads API keys (WeatherAPI + Groq)
-│   ├── app.py                   # Flask backend application entry point
-│   ├── test_weather.py          # Unit test script for weather functionality
-│   └── weather_utils.py         # Weather-related utility functions
+│   ├── templates/             # HTML templates for Flask
+│   │   └── index.html         # Main frontend interface
+│   ├── api_keys.py            # Stores or loads API keys (WeatherAPI + Groq)
+│   ├── app.py                 # Flask backend application entry point
+│   ├── test_weather.py        # Unit test script for weather functionality
+│   └── weather_utils.py       # Weather-related utility functions
+
 
 
