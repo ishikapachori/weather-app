@@ -39,10 +39,6 @@ Add your keys in api_keys.py
 
 ---
 
-##
-🧑‍💻 Author
-Made by Ishika Pachori
-
 
 
 
