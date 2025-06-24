@@ -28,6 +28,6 @@ Add your keys in api_keys.py
 
 ---
 
-<pre> ### 📁 File Structure ``` WEATHER-APP/ │ ├── backend/ │ ├── templates/ # HTML templates for Flask │ │ └── index.html # Main frontend interface │ ├── api_keys.py # Stores or loads API keys (WeatherAPI + Groq) │ ├── app.py # Flask backend application entry point │ ├── test_weather.py # Unit test script for weather functionality │ └── weather_utils.py # Weather-related utility functions │ └── output.png # Optional output screenshot ``` </pre>
+![image](https://github.com/user-attachments/assets/94e17674-eec5-4d45-adbb-d483086dffc7)
 
 
