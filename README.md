@@ -18,7 +18,7 @@ This is a simple web app that displays the current weather for a given city alon
 ## 🔑 API Keys Required
 
 To run this project, you must **add your own API keys** for:
-
+(both are free)
 1. **WeatherAPI**  
    - Get it here: [https://www.weatherapi.com](https://www.weatherapi.com)
 2. **Groq (OpenAI-compatible LLM API)**  
@@ -34,7 +34,9 @@ Add your keys in api_keys.py
 ---
 
 ## 📸 Screenshot
-![image](https://github.com/user-attachments/assets/188612ef-92dc-45c7-a306-ec0df23df7cd)
+
+![image](https://github.com/user-attachments/assets/9d60a79c-37af-4da8-be91-492989266f0f)
+
 ![output](https://github.com/user-attachments/assets/acf9bf80-0b40-43cf-9ea0-9f34965cadd1)
 
 ---
