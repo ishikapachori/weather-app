@@ -18,12 +18,13 @@ This is a simple web app that displays the current weather for a given city alon
 ## 🔑 API Keys Required
 
 To run this project, you must **add your own API keys** for:
-(both are free)
+
 1. **WeatherAPI**  
    - Get it here: [https://www.weatherapi.com](https://www.weatherapi.com)
 2. **Groq (OpenAI-compatible LLM API)**  
    - Get it here: [https://console.groq.com/keys](https://console.groq.com/keys)
 
+(both are free)
 Add your keys in api_keys.py
 
 ---
