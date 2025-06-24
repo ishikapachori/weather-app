@@ -28,6 +28,22 @@ Add your keys in api_keys.py
 
 ---
 
+## 🧭 File Structure
 ![image](https://github.com/user-attachments/assets/94e17674-eec5-4d45-adbb-d483086dffc7)
+
+---
+
+## 📸 Screenshot
+![image](https://github.com/user-attachments/assets/188612ef-92dc-45c7-a306-ec0df23df7cd)
+![output](https://github.com/user-attachments/assets/acf9bf80-0b40-43cf-9ea0-9f34965cadd1)
+
+---
+
+##
+🧑‍💻 Author
+Made by Ishika Pachori
+
+
+
 
 
